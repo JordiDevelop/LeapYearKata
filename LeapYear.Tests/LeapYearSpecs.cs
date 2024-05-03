@@ -17,5 +17,12 @@ namespace LeapYear.Tests
             var result = Year.IsLeap(1100);
             Assert.False(result);
         }
+        
+        [Fact]
+        public void IsNotLeap2001()
+        {
+            var result = Year.IsLeap(1984);
+            Assert.False(result);
+        }
     }
 }
