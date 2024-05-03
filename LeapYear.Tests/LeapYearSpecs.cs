@@ -11,24 +11,13 @@ namespace LeapYear.Tests
             Assert.True(result);
         }
         
-        [Fact]
-        public void IsNotLeap1100()
+        [Theory]
+        [InlineData(1100)]
+        [InlineData(2001)]
+        [InlineData(2007)]
+        public void IsNotLeapIfNotDividibleBy400(int year)
         {
-            var result = Year.IsLeap(1100);
-            Assert.False(result);
-        }
-        
-        [Fact]
-        public void IsNotLeap2001()
-        {
-            var result = Year.IsLeap(2001);
-            Assert.False(result);
-        }
-        
-        [Fact]
-        public void IsNotLeap2007()
-        {
-            var result = Year.IsLeap(2007);
+            var result = Year.IsLeap(year);
             Assert.False(result);
         }
     }

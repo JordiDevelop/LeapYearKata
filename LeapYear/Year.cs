@@ -4,7 +4,7 @@ namespace LeapYear
     {
         public static bool IsLeap(int year)
         {
-            if (year == 1100 || year == 2001 || year == 2007)
+            if (year % 400 != 0)
             {
                 return false;
             }
